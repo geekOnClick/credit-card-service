@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="./lib/bootstrap/css/bootstrap-reboot.css"
+            rel="stylesheet"
+        />
+        <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="lib/material/style.css" rel="stylesheet" />
+        <script src="./lib/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@400;500&family=Ubuntu:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./css/style.css" rel="stylesheet" />
+        <title>Home Page</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="wrapper h-100">
+            <header
+                class="header container d-flex justify-content-between align-items-center"
+            >
+                <div class="bank-logo">
+                    <a href="#">NeoBank</a>
+                </div>
+                <nav class="product-nav justify-content-between">
+                    <a href="#">Credit card</a>
+                    <a href="#">Product</a>
+                    <a href="#">Account</a>
+                    <a href="#">Resources</a>
+                </nav>
+                <button class="btn btn_online">Online Bank</button>
+                <div class="burger-menu">
+                    <span class="burger-menu burger-menu_outer"
+                        ><i class="mdi mdi-menu"></i
+                    ></span>
+                    <div class="burger-menu__wrapper position-relative"></div>
+                    <nav class="burger-menu_nav">
+                        <span class="burger-menu burger-menu_inner"
+                            ><i class="mdi mdi-window-close"></i
+                        ></span>
+                        <a href="#section-1" class="burger-menu_link"
+                            >Credit card</a
+                        >
+                        <a href="#section-2" class="burger-menu_link"
+                            >Product</a
+                        >
+                        <a href="#section-3" class="burger-menu_link"
+                            >Account</a
+                        >
+                        <a href="#section-4" class="burger-menu_link"
+                            >Resources</a
+                        >
+                    </nav>
+                    <button class="btn btn__inner">Online Bank</button>
+
+                    <div class="burger-menu_overlay"></div>
+                </div>
+            </header>
+
+            <main
+                class="main main_spacing container d-flex flex-grow-1 flex-column"
+            >
+                <div
+                    class="cards-design d-block d-md-flex align-items-md-center flex-md-column flex-lg-row justify-content-between"
+                >
+                    <div>
+                        <h2 class="cards-design__promo-text">
+                            Choose the design you like and apply for card right
+                            now
+                        </h2>
+                        <button class="btn cards-design__choose-btn">
+                            Choose the card
+                        </button>
+                    </div>
+                    <div
+                        class="cards-design__promo-cards d-flex justify-content-between flex-wrap"
+                    >
+                        <img
+                            src="./img/promo_cards/cardImage1.jpg"
+                            alt="promo-card 1"
+                        />
+                        <img
+                            src="./img/promo_cards/cardImage2.jpg"
+                            alt="promo-card 2"
+                        />
+                        <img
+                            src="./img/promo_cards/cardImage3.jpg"
+                            class="align-self-end"
+                            alt="promo-card 3"
+                        />
+                        <img
+                            src="./img/promo_cards/cardImage4.jpg"
+                            class="align-self-end"
+                            alt="promo-card 4"
+                        />
+                    </div>
+                </div>
+                <div
+                    class="features features_spacing d-block d-lg-flex justify-content-lg-between"
+                >
+                    <div class="features__img"></div>
+                    <div
+                        class="features__textblock d-flex flex-column justify-content-lg-start justify-content-xl-center"
+                    >
+                        <div>We Provide Many Features You Can Use</div>
+                        <div>
+                            You can explore the features that we provide with
+                            fun and have their own functions each feature
+                        </div>
+                        <ul
+                            class="features__list d-flex justify-content-between flex-column"
+                        >
+                            <li class="features__item">
+                                Powerfull online protection.
+                            </li>
+                            <li class="features__item">
+                                Cashback without borders.
+                            </li>
+                            <li class="features__item">Personal design</li>
+                            <li class="features__item">
+                                Work anywhere in the world
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="exchange exchange_spacing d-lg-flex justify-content-lg-between"
+                >
+                    <div class="exchange__courses d-flex flex-column">
+                        <h3>Exchange rate in internet bank</h3>
+                        <h4 class="exchange__title">Currency</h4>
+                        <div class="exchange__list d-flex flex-wrap">
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>USD:</span>
+                                <span>60.78</span>
+                            </div>
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>CNY:</span>
+                                <span>9.08</span>
+                            </div>
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>CHF:</span>
+                                <span>64.78</span>
+                            </div>
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>USD:</span>
+                                <span>60.78</span>
+                            </div>
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>JPY:</span>
+                                <span>0.46</span>
+                            </div>
+                            <div
+                                class="exchange__item d-flex justify-content-between"
+                            >
+                                <span>TRY:</span>
+                                <span>3.39</span>
+                            </div>
+                        </div>
+                        <a href="#" class="exchange__link_colored"
+                            >All courses</a
+                        >
+                    </div>
+                    <div
+                        class="exchange__update-time d-flex flex-column align-items-start align-items-lg-end"
+                    >
+                        <div>Update every 15 minutes, MSC 09.08.2022</div>
+                        <svg
+                            width="120"
+                            height="113"
+                            viewBox="0 0 120 113"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M115.936 94.1348V82.6425H107.561V40.4421H115.936V19.631H108.969L60 0L11.0311 19.631H4.0643V40.4421H12.4385V82.6423H4.0643V94.1346H0V112.758H120V94.1346H115.936V94.1348ZM60 7.68258L89.8055 19.6313H30.1945L60 7.68258ZM11.1952 33.3115V26.7621H108.805V33.3115H107.561H88.8799H82.0809H63.3994H56.6004H37.9188H31.1198H12.4385H11.1952ZM100.431 40.4421V82.6423H96.0108V40.4421H100.431ZM88.8799 40.4421V82.6423H82.0809V40.4421H88.8799ZM74.9503 40.4421V82.6423H70.5305V40.4421H74.9503ZM63.3996 40.4421V82.6423H56.6006V40.4421H63.3996ZM49.4698 40.4421V82.6423H45.0499V40.4421H49.4698ZM37.9188 40.4421V82.6423H31.1198V40.4421H37.9188ZM23.9892 40.4421V82.6423H19.5694V40.4421H23.9892ZM11.1952 89.7734H12.4385H31.1201H37.9191H56.6006H63.3996H82.0812H88.8801H107.562H108.805V94.1348H11.1952V89.7734ZM112.869 105.627H7.13086V101.265H112.869V105.627Z"
+                                fill="black"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="presence presence_spacing d-flex flex-column align-items-center"
+                >
+                    <h3>You can use our services anywhere in the world</h3>
+                    <h5>
+                        Withdraw and transfer money online through our
+                        application
+                    </h5>
+                    <div class="presence__map"></div>
+                </div>
+                <div
+                    class="subscribe subscribe_spacing d-flex flex-column align-items-center"
+                >
+                    <div class="subscribe__title">Support</div>
+                    <h3 class="subscribe__text subscribe__text_weight">
+                        Subscribe Newsletter & get
+                    </h3>
+                    <h3 class="subscribe__text">Bank News</h3>
+                    <form
+                        class="subscribe-form subscribe-form_spacing d-flex align-items-center justify-content-between"
+                        action="#"
+                    >
+                        <div class="subscribe-form__email-wrapper">
+                            <input
+                                class="subscribe-form__email"
+                                type="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+                        <button class="subscribe-form__btn">Subscribe</button>
+                    </form>
+                </div>
+            </main>
+
+            <footer class="footer footer__spacer d-flex flex-column">
+                <div class="container">
+                    <div class="footer__top d-flex justify-content-between">
+                        <div
+                            class="logo d-flex flex-column justify-content-center"
+                        >
+                            <a href="#">
+                                <img src="./img/logo.png" alt="logo" />
+                            </a>
+                        </div>
+                        <div
+                            class="contacts d-flex flex-column justify-content-between"
+                        >
+                            <span>+7 (495) 984 25 13</span>
+                            <span>info@neoflex.ru</span>
+                        </div>
+                    </div>
+                    <div
+                        class="footer__bottom d-flex flex-column justify-content-between"
+                    >
+                        <ul class="bank-nav">
+                            <li class="bank-nav__item">
+                                <a href="#">About bank</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Ask a Question</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Quality of service</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Requisites</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Press center</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Bank career</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Investors</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Analytics</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Business and processes</a>
+                            </li>
+                            <li class="bank-nav__item">
+                                <a href="#">Compliance and business ethics</a>
+                            </li>
+                        </ul>
+                        <div class="spacer spacer__spacing"></div>
+                        <div class="cookies-info cookies-info__spacing">
+                            We use cookies to personalize our services and
+                            improve the user experience of our website. Cookies
+                            are small files containing information about
+                            previous visits to a website. If you do not want to
+                            use cookies, please change your browser settings
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>

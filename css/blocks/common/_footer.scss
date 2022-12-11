@@ -1,0 +1,148 @@
+footer {
+    background: linear-gradient(
+            0deg,
+            rgba(178, 178, 178, 0.2),
+            rgba(178, 178, 178, 0.2)
+        ),
+        #f4f4f4;
+}
+.footer__spacer {
+    margin-top: 35px;
+}
+.footer__top {
+    height: 74px;
+    margin-top: 15px;
+}
+.contacts {
+    padding-top: 15px;
+}
+.contacts span:first-child {
+    font-size: 30px;
+    line-height: 147.4%;
+    text-align: center;
+    color: #000000;
+}
+.contacts span:last-child {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 147.4%;
+    letter-spacing: 0.02em;
+    color: #2d3748;
+}
+.contacts span:last-child {
+    align-self: flex-end;
+}
+.footer__bottom {
+    margin-top: 32px;
+}
+.bank-nav {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1242px;
+}
+.bank-nav__item {
+    padding-left: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 147.4%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.bank-nav__item:first-child,
+.bank-nav__item:last-child {
+    padding-top: 0;
+}
+.spacer {
+    height: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.81);
+    background: rgba(255, 255, 255, 0.81);
+    transform: rotate(179.82deg);
+}
+.spacer__spacing {
+    margin-top: 28px;
+}
+.cookies-info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 147.4%;
+    letter-spacing: 0.02em;
+    color: #2d3748;
+    text-align: center;
+}
+.cookies-info__spacing {
+    margin-top: 32px;
+}
+// Tablet
+@media screen and (min-width: 768px) {
+    .bank-nav {
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .cookies-info {
+        text-align: start;
+    }
+}
+
+// Small Laptop
+@media screen and (min-width: 920px) {
+    .footer__top {
+        margin-top: 70px;
+    }
+    .footer {
+        height: 400px;
+        padding-bottom: 10px;
+    }
+    .bank-nav {
+        justify-content: flex-start;
+        height: 58px;
+        flex-direction: column;
+    }
+    .bank-nav__item {
+        padding-left: 0;
+        font-size: 16px;
+    }
+}
+
+// Laptop
+@media screen and (min-width: 1300px) {
+    .footer__top {
+        margin-top: 96px;
+    }
+    .footer {
+        height: 462px;
+        padding-bottom: 10px;
+    }
+    .footer__spacer {
+        margin-top: 98px;
+    }
+    .bank-nav {
+        justify-content: space-between;
+        height: 56px;
+        flex-direction: row;
+    }
+    .bank-nav__item {
+        padding-left: 0px;
+        font-size: 14px;
+    }
+    .bank-nav__item {
+        padding-left: 32px;
+        font-size: 16px;
+    }
+    .bank-nav__item:first-child,
+    .bank-nav__item:last-child {
+        padding-left: 0;
+    }
+    .cookies-info {
+        font-size: 16px;
+    }
+    .cookies-info__spacing {
+        margin-top: 32px;
+    }
+    .contacts span:last-child {
+        align-self: flex-start;
+    }
+}
