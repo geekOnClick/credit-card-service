@@ -117,10 +117,33 @@
 .exchange__list {
     margin-top: 32px;
     width: 410px;
+    min-height: 76.8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 32px;
     grid-row-gap: 32px;
+}
+.loader,
+.loader-news {
+    width: 76px;
+    height: 76px;
+    border: 7px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loader 0.7s linear infinite;
+}
+@keyframes loader {
+    from {
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loader-news {
+    margin: 0 auto;
+}
+.hide-loader {
+    display: none;
 }
 .exchange__item span:last-child {
     margin-left: 20px;
@@ -153,9 +176,7 @@
     margin-top: 90px;
 }
 
-// .presence {
-//     height: 644px;
-// }
+// presence
 .presence_spacing {
     margin-top: 35px;
 }
@@ -180,9 +201,169 @@
     background: url('../img/map-sm.svg');
 }
 
-// .subscribe {
-//     height: 325px;
-// }
+// news
+
+.news_spacing {
+    margin-top: 35px;
+}
+.news h3 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #000000;
+}
+.news h5 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    color: #2d3748;
+}
+.news-slider {
+    max-width: 1300px;
+
+    // width: 100%;
+    /* margin: auto;
+    padding: 15px; */
+    text-align: center;
+    position: relative;
+}
+.news-slider-loading {
+    width: 100%;
+}
+.news-slider_spacing {
+    margin-top: 46px;
+}
+.scroller {
+    overflow: hidden;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+.scroller-loading {
+    justify-content: center;
+}
+.news-items-block {
+    display: flex;
+    justify-content: space-between;
+    height: 448px;
+}
+.news-item {
+    width: 320px;
+    height: 448px;
+    scroll-snap-align: start;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 28px;
+    border: 2px solid #bbbbbb;
+    margin: 0 40px;
+    cursor: pointer;
+}
+.news-item:first-child {
+    margin-left: 21px;
+}
+.card {
+    width: 256px;
+    height: 384px;
+}
+.card img {
+    width: 256px;
+    height: 120px;
+}
+.card p {
+    margin-top: 32px;
+    font-weight: 500;
+    text-align: center;
+    overflow: hidden;
+}
+.card p:nth-child(2) {
+    height: 104px;
+    font-size: 20px;
+    line-height: 25px;
+}
+.card p:last-child {
+    height: 96px;
+    font-size: 16px;
+    line-height: 23px;
+    cursor: pointer;
+}
+.card p:last-child:hover {
+    text-decoration: underline;
+}
+.btns-block {
+    display: flex;
+    justify-content: end;
+}
+.btns-block_spacing {
+    margin-top: 48px;
+}
+.left-btn,
+.right-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    border: none;
+}
+.right-btn {
+    margin-left: 20px;
+}
+.left-btn_enabled {
+    background: #003cff;
+    background-image: url('../img/arr-left-en.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.left-btn_disabled {
+    background: #ffffff;
+    background-image: url('../img/arr-left-dis.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right-btn_enabled {
+    background: #003cff;
+    background-image: url('../img/arr-right-en.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right-btn_disabled {
+    background: #ffffff;
+    background-image: url('../img/arr-right-dis.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1490px) {
+    .news-slider {
+        max-width: 888px;
+    }
+    .scroller {
+        margin-left: 92px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .news-slider {
+        max-width: 888px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .news-slider {
+        max-width: 720px;
+    }
+    .scroller {
+        margin-left: 0;
+    }
+    .news-item {
+        margin: 0 22px;
+    }
+    .btns-block {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 732px) {
+    .news-slider {
+        max-width: 321px;
+    }
+}
+//Subscribe
 .subscribe_spacing {
     margin-top: 35px;
 }
