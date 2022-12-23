@@ -135,43 +135,8 @@
                     <div class="exchange__courses d-flex flex-column">
                         <h3>Exchange rate in internet bank</h3>
                         <h4 class="exchange__title">Currency</h4>
-                        <div class="exchange__list d-flex flex-wrap">
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>USD:</span>
-                                <span>60.78</span>
-                            </div>
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>CNY:</span>
-                                <span>9.08</span>
-                            </div>
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>CHF:</span>
-                                <span>64.78</span>
-                            </div>
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>USD:</span>
-                                <span>60.78</span>
-                            </div>
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>JPY:</span>
-                                <span>0.46</span>
-                            </div>
-                            <div
-                                class="exchange__item d-flex justify-content-between"
-                            >
-                                <span>TRY:</span>
-                                <span>3.39</span>
-                            </div>
+                        <div class="exchange__list">
+                            <div class="loader"></div>
                         </div>
                         <a href="#" class="exchange__link_colored"
                             >All courses</a
@@ -205,6 +170,32 @@
                     </h5>
                     <div class="presence__map"></div>
                 </div>
+
+                <div
+                    class="news news_spacing d-flex flex-column align-items-center"
+                >
+                    <h3>Current news from the world of finance</h3>
+                    <h5>
+                        We update the news feed every 15 minutes. You can learn
+                        more by clicking on the news you are interested in.
+                    </h5>
+                    <div
+                        class="news-slider news-slider_spacing news-slider-loading"
+                    >
+                        <div class="scroller scroller-loading">
+                            <div class="news-items-block">
+                                <div class="loader-news"></div>
+                            </div>
+                        </div>
+                        <div class="btns-block btns-block_spacing">
+                            <button class="left-btn left-btn_disabled"></button>
+                            <button
+                                class="right-btn right-btn_enabled"
+                            ></button>
+                        </div>
+                    </div>
+                </div>
+
                 <div
                     class="subscribe subscribe_spacing d-flex flex-column align-items-center"
                 >
@@ -294,6 +285,7 @@
                 </div>
             </footer>
         </div>
-        <script src="./scripts/main.js"></script>
+        <script src="./scripts/config.js"></script>
+        <script src="./scripts/home.js"></script>
     </body>
 </html>
