@@ -1,0 +1,166 @@
+.header {
+    height: 64px;
+}
+.bank-logo a {
+    font-size: 24px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+    color: #b4387a;
+}
+.product-nav {
+    display: none;
+    width: 437px;
+}
+.product-nav a {
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'salt' on, 'liga' off;
+}
+.product-nav_active {
+    color: #b2a35f;
+}
+.product-nav_inactive {
+    color: #1d1929;
+}
+.btn_online {
+    display: none;
+    width: 128px;
+    height: 50px;
+}
+// Burger Menu
+
+.mdi-menu {
+    font-size: 40px;
+    color: #b4387a;
+    cursor: pointer;
+}
+.mdi-window-close {
+    font-size: 30px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.mdi-window-close:hover {
+    color: #b4387a;
+}
+.burger-menu {
+    display: block;
+}
+.burger-menu_inner {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+.burger-menu_nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background: #2b343c;
+    overflow-y: auto;
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.btn__inner {
+    width: 128px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    z-index: 20;
+    right: -100%;
+}
+.burger-menu_active .btn__inner {
+    bottom: 150px;
+    right: 45px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.burger-menu_link {
+    padding: 10px 35px;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+.burger-menu_link:first-child {
+    border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+    color: #b4387a;
+    filter: brightness(0.9);
+}
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Mobile (min-width: 500px)
+@media screen and (min-width: 500px) {
+    .product-nav,
+    .btn_online {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+}
+// Mobile (min-width: 768px)
+@media screen and (min-width: 768px) {
+    .product-nav {
+        display: flex;
+        width: 365px;
+    }
+    .product-nav a {
+        font-size: 14px;
+    }
+    .btn_online {
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+// Tablet-Small Laptop
+@media screen and (min-width: 920px) {
+    .product-nav {
+        width: 437px;
+    }
+    .product-nav a {
+        font-size: 16px;
+    }
+
+    // .product-nav {
+    //     display: flex;
+    // }
+    // .btn_online {
+    //     display: block;
+    // }
+    // .burger-menu {
+    //     display: none;
+    // }
+}
