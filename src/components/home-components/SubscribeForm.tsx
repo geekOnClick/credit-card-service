@@ -1,7 +1,10 @@
 import { Button } from 'components/common/Button';
 import { useSubscribe } from 'hooks/use-subscribe';
+import { useState } from 'react';
 const SubscribeForm = () => {
-    const { subscribed, error, subscribe } = useSubscribe();
+    const [email, setEmail] = useState('');
+    const { subscribed, error, subscribe } = useSubscribe(email);
+
     return (
         <>
             {subscribed && (
@@ -25,6 +28,7 @@ const SubscribeForm = () => {
                             type='email'
                             name='email'
                             placeholder='Your email'
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <Button

@@ -82,15 +82,9 @@
 
 .exchange {
     // height: 366px;
-    background: linear-gradient(
-            358.2deg,
-            rgba(178, 178, 178, 0.8) 8.06%,
-            rgba(178, 178, 178, 0) 67.93%
-        ),
-        rgba(244, 244, 244, 0.9);
+    background: linear-gradient(358.2deg, rgba(178, 178, 178, 0.8) 8.06%, rgba(178, 178, 178, 0) 67.93%), rgba(244, 244, 244, 0.9);
     mix-blend-mode: normal;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08),
-        0px 2px 4px rgba(187, 187, 187, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(187, 187, 187, 0.2);
     border-radius: 28px;
 }
 .exchange_spacing {
@@ -123,25 +117,11 @@
     grid-column-gap: 32px;
     grid-row-gap: 32px;
 }
-.loader,
-.loader-news {
-    width: 76px;
-    height: 76px;
-    border: 2px solid #b4387a;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: loader 0.7s linear infinite;
+.list-error {
+    width: inherit;
+    color: red;
 }
-@keyframes loader {
-    from {
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.hide-loader {
-    display: none;
-}
+
 .exchange__item span:last-child {
     margin-left: 20px;
 }

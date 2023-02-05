@@ -1,0 +1,26 @@
+.loader-wrapper {
+    align-self: center;
+    margin: 0 auto;
+}
+.loader__pin {
+    margin-top: 100px;
+}
+.loader,
+.loader-news {
+    width: 76px;
+    height: 76px;
+    border: 2px solid #b4387a;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loader 0.7s linear infinite;
+}
+@keyframes loader {
+    from {
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.hide-loader {
+    display: none;
+}

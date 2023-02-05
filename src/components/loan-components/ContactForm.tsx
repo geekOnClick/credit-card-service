@@ -1,31 +1,21 @@
 import { Button } from 'components/common/Button';
-import { LoanFormItem } from './LoanFormItem';
+import { ContactFormItem } from './ContactFormItem';
 import { Formik, Form, FormikProps } from 'formik';
 import { useValidate } from 'hooks/use-validate';
 import { useSelector } from 'react-redux';
-import { selectRangeValue } from 'features/loan/range/range-selectors';
+import { selectFormRange } from 'features/loan/application/loan-selectors';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { IFormic } from 'types/loan';
 import { RootState, useAppDispatch } from 'store';
-import {
-    changeStepData,
-    changeLoading,
-    changeError,
-} from 'features/loan/form/form-slice';
+import { changeLoanData, changeLoading, changeError } from 'features/loan/application/loan-slice';
 import axios from 'axios';
 import * as api from '_config';
 
-const LoanForm = () => {
-    const [
-        validateName,
-        validateEmail,
-        validateBirthDay,
-        validatePassNum,
-        validatePassSeries,
-    ] = useValidate();
-    const range = useSelector((state: RootState) => selectRangeValue(state));
+const ContactForm = () => {
+    const { validateName, validateEmail, validateBirthDay, validatePassNum, validatePassSeries } = useValidate();
+    const range = useSelector((state: RootState) => selectFormRange(state));
 
     const formikRef = useRef<FormikProps<IFormic>>(null);
 
@@ -61,33 +51,29 @@ const LoanForm = () => {
             onSubmit={async (values) => {
                 values.term = Number(values.term);
                 if (typeof values.middleName === 'string') {
-                    values.middleName =
-                        values.middleName.length !== 0
-                            ? values.middleName
-                            : null;
+                    values.middleName = values.middleName.length !== 0 ? values.middleName : null;
                 }
                 dispatch(changeError(false));
                 dispatch(changeLoading(true));
                 await axios
                     .post(api.SUBMIT_FORM, values)
-                    .then((data) => {
-                        console.log(data);
+                    .then((res) => {
+                        const { data } = res;
+                        // const data1:IOffer[] = data
                         dispatch(changeLoading(false));
                         dispatch(
-                            changeStepData({
-                                stepNum: 'first',
-                                data: values,
+                            changeLoanData({
+                                stage: 1,
+                                data: data,
                             })
                         );
+                        // const savedData = data1.map(el => JSON.stringify(el))
+                        localStorage.setItem('stage', '2');
+                        // localStorage.setItem('offers', JSON.stringify(savedData));
+                        localStorage.setItem('offers', JSON.stringify(data));
                     })
                     .catch((err) => {
                         console.log(err);
-                        dispatch(
-                            changeStepData({
-                                stepNum: 'first',
-                                data: values,
-                            })
-                        );
                         dispatch(changeLoading(false));
                         dispatch(changeError(true));
                     });
@@ -97,7 +83,7 @@ const LoanForm = () => {
             {({ errors, touched }) => (
                 <Form className='form registration__form'>
                     <div className='form__fields'>
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.lastName}
                             touched={touched.lastName}
                             id='lastName'
@@ -106,7 +92,7 @@ const LoanForm = () => {
                             inputPlaceholder='For Example Doe'
                             validateFunc={validateName}
                         />
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.firstName}
                             touched={touched.firstName}
                             id='firstName'
@@ -115,7 +101,7 @@ const LoanForm = () => {
                             inputPlaceholder='For Example John'
                             validateFunc={validateName}
                         />
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.middleName}
                             touched={touched.middleName}
                             id='middleName'
@@ -123,14 +109,10 @@ const LoanForm = () => {
                             required={false}
                             inputPlaceholder='Victorovich'
                         />
-                        <LoanFormItem
-                            title='Select term'
-                            id='term'
-                            required={true}
-                        />
+                        <ContactFormItem title='Select term' id='term' required={true} />
                     </div>
                     <div className='form__fields'>
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.email}
                             touched={touched.email}
                             id='email'
@@ -139,7 +121,7 @@ const LoanForm = () => {
                             inputPlaceholder='test@gmail.com'
                             validateFunc={validateEmail}
                         />
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.birthdate}
                             touched={touched.birthdate}
                             id='birthdate'
@@ -148,7 +130,7 @@ const LoanForm = () => {
                             inputPlaceholder='1992-08-14'
                             validateFunc={validateBirthDay}
                         />
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.passportSeries}
                             touched={touched.passportSeries}
                             id='passportSeries'
@@ -157,7 +139,7 @@ const LoanForm = () => {
                             inputPlaceholder='0000'
                             validateFunc={validatePassSeries}
                         />
-                        <LoanFormItem
+                        <ContactFormItem
                             error={errors.passportNumber}
                             touched={touched.passportNumber}
                             id='passportNumber'
@@ -167,14 +149,10 @@ const LoanForm = () => {
                             validateFunc={validatePassNum}
                         />
                     </div>
-                    <Button
-                        additional_class='form__btn'
-                        title='Continue'
-                        type='submit'
-                    />
+                    <Button additional_class='form__btn' title='Continue' type='submit' />
                 </Form>
             )}
         </Formik>
     );
 };
-export { LoanForm };
+export { ContactForm };

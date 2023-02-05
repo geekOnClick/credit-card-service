@@ -1,7 +1,9 @@
 import { Button } from 'components/common/Button';
 import { Tooltip } from '../common/Tooltip';
+import { useButton } from 'hooks/use-button';
 
 const CardAds = () => {
+    const { title, callback } = useButton();
     return (
         <div className='cardAds cardAds_spacing d-block d-lg-flex justify-content-lg-between'>
             <div className='cardAds__wrapper'>
@@ -42,10 +44,11 @@ const CardAds = () => {
                     </div>
                     <div className='btn-wrapper'>
                         <Button
-                            title='Apply for card'
+                            title={title}
                             additional_class='cardAds__btn'
                             callback={() => {
-                                window.location.href = '#apply-card';
+                                // window.location.href = '#apply-card';
+                                callback();
                             }}
                         />
                     </div>

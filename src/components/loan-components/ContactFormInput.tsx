@@ -1,7 +1,7 @@
 import { IFormInput } from 'types/loan';
 import { Field, ErrorMessage } from 'formik';
 
-const LoanFormInput: React.FC<IFormInput> = (props: IFormInput) => {
+const ContactFormInput: React.FC<IFormInput> = (props: IFormInput) => {
     const { id, placeholder, error, touched, validateFunc } = props;
 
     return (
@@ -60,4 +60,4 @@ const LoanFormInput: React.FC<IFormInput> = (props: IFormInput) => {
         </>
     );
 };
-export { LoanFormInput };
+export { ContactFormInput };

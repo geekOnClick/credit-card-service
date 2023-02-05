@@ -1,0 +1,117 @@
+.confirm__content {
+    margin-bottom: 96px;
+    margin-top: 104px;
+}
+
+.confirm__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 112%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #1c1c1e;
+}
+
+.confirm__code-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #808080;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 112%;
+}
+
+.confirm__code-item--active {
+    border: 1px solid #3182ce;
+}
+.confirm__code-item--error {
+    border: 1px solid red;
+}
+.code-item__active {
+    width: 45px;
+    height: 38px;
+    border: none;
+    background: #f5f4ff;
+    text-align: center;
+}
+
+.confirm__code-items {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    margin-top: 35px;
+}
+
+.confirm__code-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm__code-circle {
+    border: 1.5px solid #808080;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.confirm__code-circle:focus {
+    width: 45px;
+    height: 38px;
+    border: none;
+    background: #f5f4ff;
+    text-align: center;
+}
+.confirm__code-error {
+    color: #ff5631;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 16px;
+    justify-content: center;
+    display: flex;
+    line-height: 100%;
+}
+// congratulations
+.congratulations__content {
+    margin-top: 40px;
+    margin-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.congratulations__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #1c1c1e;
+    margin: 32px auto;
+}
+
+.congratulations__desc {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #4f5665;
+}
+
+.congratulations__btn {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px;
+    max-width: 268px;
+    height: 50px;
+    background: #003cff;
+    border-radius: 16px;
+    border: 0;
+    color: #fff;
+    margin-top: 32px;
+}
+
+.congratulations__img {
+    max-width: 150px;
+    width: 100%;
+}

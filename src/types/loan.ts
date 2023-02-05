@@ -5,7 +5,6 @@ export interface IAccordion {
 export interface IStep {
     number: number;
     title: string;
-    width: number;
 }
 export interface IFormic {
     amount: number;
@@ -42,4 +41,22 @@ export interface IFormLabel {
     id: string;
     title: string;
     required: boolean;
+}
+export interface IOffer {
+    applicationId: number;
+    requestedAmount: number;
+    totalAmount: number;
+    term: number;
+    monthlyPayment: number;
+    rate: number;
+    isInsuranceEnabled: boolean;
+    isSalaryClient: boolean;
+}
+export interface IScheduleItem {
+    date: string;
+    debtPayment: number;
+    interestPayment: number;
+    number: number;
+    remainingDebt: number;
+    totalPayment: number;
 }

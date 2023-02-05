@@ -4,16 +4,16 @@ import axios from 'axios';
 import * as api from '_config';
 import { exchangeReducer } from 'features/home/exchange/exchange-slice';
 import { newsReducer } from 'features/home/news/news-slice';
-import { rangeReducer } from 'features/loan/range/range-slice';
-import { formReducer } from 'features/loan/form/form-slice';
+import { loanReducer } from 'features/loan/application/loan-slice';
+import { applicationIdReducer } from 'features/loan/applicationId/applicationId-slice';
 // import * as conf from 'config'
 
 export const store = configureStore({
     reducer: {
         exchange: exchangeReducer,
         news: newsReducer,
-        range: rangeReducer,
-        form: formReducer,
+        loan: loanReducer,
+        applicationId: applicationIdReducer,
     },
     devTools: true,
     middleware: (getDefaultMiddleware) =>

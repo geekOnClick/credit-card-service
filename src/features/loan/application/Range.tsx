@@ -1,4 +1,4 @@
-import { useRange } from 'features/loan/range/use-range';
+import { useRange } from './use-range';
 
 const Range = () => {
     const [updatedRange, handleChange] = useRange();

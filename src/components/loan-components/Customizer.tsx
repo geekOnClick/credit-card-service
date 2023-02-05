@@ -1,18 +1,13 @@
-import { LoanForm } from './LoanForm';
+import { ContactForm } from './ContactForm';
 import { Devider } from 'components/common/Devider';
-import { Range } from '../../features/loan/range/Range';
-import { useRange } from 'features/loan/range/use-range';
+import { Range } from 'features/loan/application/Range';
+import { useRange } from 'features/loan/application/use-range';
 import { useSelector } from 'react-redux';
 import { RootState } from 'store';
-import {
-    selectFormLoading,
-    selectFormError,
-} from 'features/loan/form/form-selectors';
-import { Loader } from 'components/common/Loader';
+import { selectFormError } from 'features/loan/application/loan-selectors';
 
 const Customizer = () => {
     const [updatedRange] = useRange();
-    const loading = useSelector((state: RootState) => selectFormLoading(state));
     const error = useSelector((state: RootState) => selectFormError(state));
 
     return (
@@ -47,12 +42,7 @@ const Customizer = () => {
                     <h3 className='customize__information-heading'>
                         Contact Information
                     </h3>
-                    {loading && (
-                        <div className='customize__loader-center'>
-                            <Loader />
-                        </div>
-                    )}
-                    {!loading && <LoanForm />}
+                    <ContactForm />
                     {error && (
                         <h4 className='subscribe__error'>
                             Error occured. Try again later.

@@ -1,0 +1,122 @@
+.signing__spacing {
+    margin-top: 104px;
+    margin-bottom: 32px;
+}
+.signing__spacing {
+    margin-top: 25px;
+}
+.signingDoc__block {
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.signingDoc__top {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.signingDoc__title {
+    font-weight: 700;
+}
+.signingDoc__right-text {
+    margin-left: 120px;
+}
+.signingDoc__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.signingDoc__desc {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #4f5665;
+}
+
+.signingDoc__info {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.signingDoc__info-left {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+.signingDoc__info-desc {
+    margin-right: 80px;
+    font-size: 20px;
+}
+.signingDoc__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.signingDoc__input {
+    margin-right: 16px;
+    width: 20px;
+    height: 20px;
+}
+.signingDoc__btn {
+    margin-left: 80px;
+    color: #fff;
+    background-color: #003cff;
+
+    border-radius: 8px;
+    padding: 11px 60px 11px 60px;
+}
+.doc_block {
+    max-width: 554px;
+    margin-bottom: 130px;
+}
+.doc__desc {
+    max-width: 392px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .signing__spacing {
+        margin-top: 104px;
+        margin-bottom: 62px;
+    }
+    .signingDoc__desc {
+        margin-top: 55px;
+    }
+    .signingDoc__info {
+        justify-content: flex-start;
+    }
+    .signingDoc__form {
+        justify-content: flex-end;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .signingDoc__info-desc {
+        margin-right: 180px;
+    }
+    .signingDoc__block {
+        justify-content: space-between;
+    }
+    .signingDoc__btn {
+        margin-left: 44px;
+    }
+    .signingDoc__title {
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        column-gap: 120px;
+        align-items: center;
+    }
+}

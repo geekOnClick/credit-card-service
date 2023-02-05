@@ -1,0 +1,237 @@
+.schedule__spacer {
+    margin-top: 24px;
+}
+
+.schedule__loader-center {
+    display: flex;
+    justify-content: center;
+}
+.schedule__wrapper {
+    max-width: 1300px;
+    margin: auto;
+    padding: 32px;
+    background-color: rgb(255, 255, 255);
+    /* display: flex; */
+    justify-content: space-between;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 8%), 0px 2px 4px rgb(0 0 0 / 20%);
+    border-radius: 28px;
+}
+.schedule__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.schedule__border {
+    width: 220px;
+    height: 0px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 10px;
+    margin-bottom: 32px;
+}
+.schedule__left-block {
+    flex-basis: 100%;
+}
+
+.schedule__right-block {
+    flex-basis: 100%;
+}
+
+.schedule__title {
+    font-weight: 700;
+}
+
+.schedule__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.paymentShedule {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.paymentShedule__tr {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 5px;
+}
+
+.paymentShedule__title,
+.paymentShedule__data {
+    padding: 20px 0;
+    font-size: 12px;
+    position: relative;
+}
+
+.paymentShedule__title {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #4a5568;
+    text-align: left;
+    position: relative;
+}
+.sort-asc::after {
+    content: '';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    background: url('../../img/up-arrow.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.sort-dsc::after {
+    content: '';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    background: url('../../img/down-arrow.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.paymentShedule__btns .form__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    color: #fff;
+    width: 96px;
+    height: 40px;
+    border: 0;
+    background: rgba(217, 55, 55, 0.8);
+    border-radius: 8px;
+}
+
+.paymentShedule__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 26px;
+}
+
+.paymentShedule__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    align-items: flex-end;
+}
+
+.paymentShedule__btn-wrapper span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 112%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1a202c;
+}
+
+.paymentShedule__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 96px;
+    height: 40px;
+    border: 0;
+    background: #003cff;
+    border-radius: 8px;
+    color: #fff;
+}
+@media screen and (max-width: 920px) {
+    .paymentShedule {
+        border: 0;
+    }
+    .paymentShedule__tr tr {
+        display: none;
+    }
+    .paymentShedule__tr {
+        border-bottom: 1px solid black;
+    }
+    table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        color: #4a5568;
+    }
+    .sort-adapt-asc::after {
+        content: '';
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: url('../../img/up-arrow.svg') no-repeat;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -14px;
+        cursor: pointer;
+    }
+    .sort-adapt-dsc::after {
+        content: '';
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: url('../../img/down-arrow.svg') no-repeat;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -14px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 768px) {
+    .paymentShedule__btn-wrapper {
+        column-gap: 7px;
+    }
+    .paymentShedule__btn-wrapper input {
+        margin-left: 50px;
+    }
+    .paymentShedule__btn-wrapper span {
+        font-size: 12px;
+    }
+}
+
+// Shedule Sent
+.doc_block {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 190px;
+}
+.doc__title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 32px;
+}
+.doc__desc {
+    font-weight: 500;
+    font-size: 16px;
+}

@@ -1,10 +1,6 @@
 .cardAds {
     height: 390px;
-    background: linear-gradient(
-        180.8deg,
-        rgba(203, 213, 224, 0.624) 34.33%,
-        rgba(254, 235, 200, 0.56) 64.27%
-    );
+    background: linear-gradient(180.8deg, rgba(203, 213, 224, 0.624) 34.33%, rgba(254, 235, 200, 0.56) 64.27%);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 28.8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -78,7 +74,7 @@
 }
 .cardAds__btn {
     margin-top: 32px;
-    width: 145px;
+    width: 149px;
     height: 50px;
     border-radius: 8px;
 }
@@ -127,7 +123,7 @@
     }
     .cardAds__btn {
         margin-top: 32px;
-        width: 145px;
+        width: 149px;
         height: 50px;
         border-radius: 8px;
     }
@@ -507,6 +503,15 @@ details[open] summary:after {
 
 .stepper_spacing {
     margin-top: 14px;
+}
+.step__first {
+    max-width: 334px;
+}
+.step__second {
+    max-width: 385px;
+}
+.step__third {
+    max-width: 419px;
 }
 .step-num {
     display: flex;
@@ -953,7 +958,10 @@ select {
         width: 100%;
     }
 }
-
+.icon_offer {
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
 select {
     color: #000000 !important;
 }
@@ -964,6 +972,117 @@ select {
     border: 1px solid red;
 }
 
+// Offers
+
+.giftbox__items {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 96px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.giftbox__item {
+    padding: 32px 0 32px 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 8%), 0px 2px 4px rgb(0 0 0 / 20%);
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 295px;
+    margin-bottom: 40px;
+    &:hover {
+        outline: 2px solid #003cff;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 28px;
+    }
+}
+
+.giftbox__list {
+    margin-top: 32px;
+}
+
+.giftbox__list-item {
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+    color: #1c1c1e;
+}
+
+.giftbox__btn {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 93px auto 0 auto;
+    width: 148px;
+    padding: 8px;
+    height: 48px;
+    background: #003cff;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 620px) {
+    .giftbox__items {
+        // max-width: 300px;
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .giftbox__items {
+        // justify-content: space-around;
+        gap: 40px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .giftbox__items {
+        // min-width: 1340px;
+        gap: 40px;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1399px) {
+}
+.msg {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 71px;
+    border: 2px solid rgba(91, 53, 213, 1);
+    border-radius: 10px;
+    margin-bottom: 96px;
+    padding: 15px;
+}
+.msg__title {
+    padding-top: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.msg__desc {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 34px;
+}
 //
 // Tablet
 // @media screen and (min-width: 768px) {

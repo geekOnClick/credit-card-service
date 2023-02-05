@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import * as api from '_config';
-export const useSubscribe = (): {
+export const useSubscribe = (
+    email: string
+): {
     subscribed: boolean;
     error: boolean;
     subscribe: (e: MouseEvent) => Promise<void>;
@@ -9,10 +11,12 @@ export const useSubscribe = (): {
     const [subscribed, setSubscribed] = useState(false);
     const [error, setError] = useState(false);
 
-    const subscribe = async (e: MouseEvent) => {
-        e.preventDefault();
+    const subscribe = async (event: MouseEvent) => {
+        event.preventDefault();
         await axios
-            .post(api.SUBSCRIBE_TO_NEWS, {})
+            .post(api.SUBSCRIBE_TO_NEWS, {
+                email: `${email}`,
+            })
             .then(() => {
                 setSubscribed(true);
                 localStorage.setItem('subscribed', `true`);
