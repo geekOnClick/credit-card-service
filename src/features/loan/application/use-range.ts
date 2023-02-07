@@ -1,7 +1,7 @@
 import { RootState, useAppDispatch } from 'store';
 import { useSelector } from 'react-redux';
-import { changeValue } from 'features/loan/range/range-slice';
-import { selectRangeValue } from 'features/loan/range/range-selectors';
+import { changeRangeValue } from './loan-slice';
+import { selectFormRange } from './loan-selectors';
 export const useRange = (): [
     string,
     (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -9,9 +9,9 @@ export const useRange = (): [
     const dispatch = useAppDispatch();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(changeValue(e.target.value));
+        dispatch(changeRangeValue(e.target.value));
     };
-    const range = useSelector((state: RootState) => selectRangeValue(state));
+    const range = useSelector((state: RootState) => selectFormRange(state));
     const updatedRange = String(range).replace(
         /(\d)(?=(\d{3})+([^\d]|$))/g,
         '$1 '

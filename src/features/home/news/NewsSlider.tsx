@@ -12,27 +12,12 @@ const NewsSlider = () => {
 
     return (
         <>
-            {error && (
-                <h4 style={{ width: 'inherit', color: 'red' }}>{error}</h4>
-            )}
+            {error && <h4 className='list-error'>{error}</h4>}
             {!error && (
-                <div
-                    className={`news-slider news-slider_spacing ${
-                        status === 'loading' ? 'news-slider-loading' : ''
-                    }`}
-                >
-                    <div
-                        ref={scroller}
-                        className={`scroller ${
-                            status === 'loading' ? 'scroller-loading' : ''
-                        }`}
-                    >
+                <div className={`news-slider news-slider_spacing ${status === 'loading' ? 'news-slider-loading' : ''}`}>
+                    <div ref={scroller} className={`scroller ${status === 'loading' ? 'scroller-loading' : ''}`}>
                         <div className='news-items-block'>
-                            {error && (
-                                <h4 style={{ width: 'inherit', color: 'red' }}>
-                                    Can&apos;t get news list
-                                </h4>
-                            )}
+                            {error && <h4 className='list-error'>Can&apos;t get news list</h4>}
                             {status === 'loading' && <Loader />}
                             <>
                                 {status === 'received' &&
@@ -54,24 +39,12 @@ const NewsSlider = () => {
                         <button
                             className='left-btn left-btn_disabled'
                             ref={prevBtn}
-                            onClick={() =>
-                                scrollToPrevItem(
-                                    nextBtn.current,
-                                    prevBtn.current,
-                                    scroller.current
-                                )
-                            }
+                            onClick={() => scrollToPrevItem(nextBtn.current, prevBtn.current, scroller.current)}
                         ></button>
                         <button
                             className='right-btn right-btn_enabled'
                             ref={nextBtn}
-                            onClick={() =>
-                                scrollToNextItem(
-                                    nextBtn.current,
-                                    prevBtn.current,
-                                    scroller.current
-                                )
-                            }
+                            onClick={() => scrollToNextItem(nextBtn.current, prevBtn.current, scroller.current)}
                         ></button>
                     </div>
                 </div>

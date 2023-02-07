@@ -1,6 +1,13 @@
 @import '_main.scss';
-@import './blocks/common/header';
-@import './blocks/common/footer';
-@import './blocks/common/btn';
-@import './blocks/home';
+@import './blocks/common/_header';
+@import './blocks/common/_footer';
+@import './blocks/common/_btn';
+@import './blocks/common/_modal';
+@import './blocks/common/_loader';
+@import './blocks/_home';
 @import './blocks/_loan';
+@import './blocks/_not-found';
+@import './blocks/_scoring-form';
+@import './blocks/_schedule';
+@import './blocks/_document';
+@import './blocks/_pin';
