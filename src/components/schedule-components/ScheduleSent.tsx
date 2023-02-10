@@ -3,7 +3,7 @@ import axios from 'axios';
 import * as api from '_config';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from 'store';
-import { changeStepDone } from 'features/loan/applicationId/applicationId-slice';
+import { changeStepDone, changeScheduleData } from 'features/loan/applicationId/applicationId-slice';
 const ScheduleSent = () => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
@@ -17,6 +17,8 @@ const ScheduleSent = () => {
                     .then(() => {
                         localStorage.setItem('applicationIdStage', '4');
                         dispatch(changeStepDone(false));
+                        dispatch(changeScheduleData([]));
+
                         localStorage.setItem('applicationIdStageDone', 'false');
                         return navigate(`/loan/${id}/document/sign`);
                     })

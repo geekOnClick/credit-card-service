@@ -71,6 +71,17 @@ footer {
   flex: 0 0 auto;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f9f5e3 inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #808080 !important;
+}
+
 .header {
   height: 64px;
 }
@@ -746,8 +757,6 @@ footer {
 
 .news-slider {
   max-width: 1300px;
-  /* margin: auto;
-  padding: 15px; */
   text-align: center;
   position: relative;
 }
@@ -964,6 +973,13 @@ footer {
 }
 
 .subscribe-form__email {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 147.4%;
+  letter-spacing: 0.02em;
+  color: #9092b0;
   border: 0;
 }
 
@@ -972,16 +988,6 @@ footer {
   position: absolute;
   left: 0px;
   top: -5px;
-}
-
-input[placeholder] {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 147.4%;
-  letter-spacing: 0.02em;
-  color: #9092b0;
 }
 
 .subscribe-form__btn {
@@ -1308,8 +1314,6 @@ input[placeholder] {
 .tooltip {
   position: relative;
   display: inline-block;
-  /*border-bottom: 1px dotted #ccc;
-  color: #006080; */
 }
 
 .tooltip .tooltiptext {
@@ -1708,7 +1712,6 @@ details[open] summary:after {
   margin: auto;
   padding: 32px;
   background-color: rgb(255, 255, 255);
-  /* display: flex; */
   justify-content: space-between;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 28px;
@@ -2289,7 +2292,6 @@ select {
   font-size: 16px;
   color: #fff;
   background-color: #003cff;
-  /* border: 1px solid #003CFF; */
   border-radius: 8px;
   padding: 11px 65px 11px 65px;
 }
@@ -2304,7 +2306,6 @@ select {
   margin: auto;
   padding: 32px;
   background-color: rgb(255, 255, 255);
-  /* display: flex; */
   justify-content: space-between;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 28px;
@@ -2493,7 +2494,6 @@ select {
   margin: auto;
   padding: 32px;
   background-color: rgb(255, 255, 255);
-  /* display: flex; */
   justify-content: space-between;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 28px;

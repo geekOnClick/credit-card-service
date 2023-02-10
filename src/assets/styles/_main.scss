@@ -58,3 +58,12 @@ main {
 footer {
     flex: 0 0 auto;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f9f5e3 inset !important;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #808080 !important;
+}

@@ -6,8 +6,6 @@ export interface IBtn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
     type?: 'submit' | 'reset' | 'button';
     callback?(event: Event | undefined): void;
-
-    // callback?: ((e: MouseEvent) => Promise<void>) | ((() => void) | null);
 }
 export interface IDevider {
     additional_class: string;

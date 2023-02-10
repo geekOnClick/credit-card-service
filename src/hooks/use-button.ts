@@ -24,8 +24,6 @@ export const useButton = (): {
     };
     const [title, setTitle] = useState('');
     const [callback, setCallback] = useState(() => applyForCard);
-    // let callback = applyForCard;
-    // if (stage === 3) callback = continueRegistration;
 
     useEffect(() => {
         switch (stage) {

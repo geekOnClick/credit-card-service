@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface IScoring {
-    gender: 'MALE' | 'FAMALE' | '';
+    gender: 'MALE' | 'FEMALE' | '';
     maritalStatus: 'MARRIED' | 'DIVORCED' | 'SINGLE' | 'WIDOW_WIDOWER' | '';
     dependentAmount: number | string;
     passportIssueDate: string;

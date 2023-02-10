@@ -16,20 +16,16 @@ export const loadNews = createAsyncThunk<
     '@@news/load-news',
     async (_, { extra: { client, api }, rejectWithValue }) => {
         try {
-            // const data = await client.get(api.ACTUAL_NEWS)
             const { data } = await client.get(api.ACTUAL_NEWS);
             // filter images and description
             const filteredData = data.articles.map(async (el: INews) => {
                 const article = JSON.parse(JSON.stringify(el));
-                if (!article.description)
-                    article.description =
-                        'Read this article by clicking here...';
+                if (!article.description) article.description = 'Read this article by clicking here...';
                 if (article.description.includes('<a href=')) {
                     if (article.content) article.description = article.content;
                 }
 
-                if (!article.urlToImage)
-                    article.urlToImage = 'assets/img/errImg.jpg';
+                if (!article.urlToImage) article.urlToImage = 'assets/img/errImg.jpg';
                 return new Promise(function (resolve) {
                     const img = new Image();
                     img.onerror = img.onabort = function () {
@@ -42,7 +38,6 @@ export const loadNews = createAsyncThunk<
                     img.src = article.urlToImage;
                 });
             });
-            // console.log('filteredData', filteredData);
             return await Promise.all(filteredData).then((res) => {
                 return res;
             });
@@ -66,7 +61,7 @@ export const loadNews = createAsyncThunk<
     }
 );
 
-interface INewsSlice {
+export interface INewsSlice {
     status: Status;
     error: string | null;
     list: INews[];

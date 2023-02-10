@@ -28,8 +28,7 @@ days.`,
     },
     {
         title: "How do I find out about the bank's decision on my application?",
-        content:
-            'After registration, you will receive an e-mail with a decision on your application.',
+        content: 'After registration, you will receive an e-mail with a decision on your application.',
     },
 ];
 export const accordionData2 = [
@@ -54,18 +53,8 @@ export const accordionData2 = [
             'For each reporting period from the 7th day of the previous month to the 6th day of the current month inclusive, a statement is generated for the credit card. The statement contains information on the amount and timing of the minimum payment, as well as the total amount of debt as of the date of issue.',
     },
 ];
-export const genderSelect = ['MALE', 'FAMALE'];
-export const maritalStatusSelect = [
-    'MARRIED',
-    'DIVORCED',
-    'SINGLE',
-    'WIDOW_WIDOWER',
-];
+export const genderSelect = ['MALE', 'FEMALE'];
+export const maritalStatusSelect = ['MARRIED', 'DIVORCED', 'SINGLE', 'WIDOW_WIDOWER'];
 export const dependentAmountSelect = [1, 2, 3, 4, 5];
-export const employmentStatusSelect = [
-    'UNEMPLOYED',
-    'SELF_EMPLOYED',
-    'EMPLOYED',
-    'BUSINESS_OWNER',
-];
+export const employmentStatusSelect = ['UNEMPLOYED', 'SELF_EMPLOYED', 'EMPLOYED', 'BUSINESS_OWNER'];
 export const positionSelect = ['WORKER', 'MID_MANAGER', 'TOP_MANAGER', 'OWNER'];

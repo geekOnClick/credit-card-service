@@ -1,19 +1,40 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+export interface IApplicationId {
+    stages: {
+        stageDone: boolean;
+        stageData: null;
+        scheduleData: Array<{
+            number: number;
+            date: string;
+            totalPayment: number;
+            interestPayment: number;
+            debtPayment: number;
+            remainingDebt: number;
+        }>;
+        scheduleChecked: boolean;
+        documentChecked: boolean;
+        sesCode: string;
+    };
+    loading: boolean;
+    error: boolean;
+}
+const initialState: IApplicationId = {
+    stages: {
+        stageDone: false,
+        stageData: null,
+        scheduleData: [],
+        scheduleChecked: false,
+        documentChecked: false,
+        sesCode: '',
+    },
+    loading: false,
+    error: false,
+};
+
 const applicationIdSlice = createSlice({
     name: '@@applicationId',
-    initialState: {
-        stages: {
-            stageDone: false,
-            stageData: null,
-            scheduleData: [],
-            scheduleChecked: false,
-            documentChecked: false,
-            sesCode: '',
-        },
-        loading: false,
-        error: false,
-    },
+    initialState: initialState,
     reducers: {
         changeStepDone: (state, action) => {
             state.stages.stageDone = action.payload;

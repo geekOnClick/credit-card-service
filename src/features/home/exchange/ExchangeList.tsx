@@ -6,7 +6,7 @@ const ExchangeList = () => {
     const [courses, { error, status }] = useExchange();
 
     return (
-        <div className='exchange__list'>
+        <div data-testid='exchange-list' className='exchange__list'>
             {error && <h4 className='list-error'>Can&apos;t get exchange list</h4>}
             {status === 'loading' && <Loader />}
             {status === 'received' && (

@@ -27,6 +27,6 @@
             "api": ["api"]
         }
     },
-    "include": ["src"],
+    "include": ["src", "src/components/common/FooterContacts/index.tsx"],
     "exclude": ["lib/**"]
 }

@@ -11,6 +11,7 @@ const Range = () => {
                 <div className='form-group range__slider'>
                     <input
                         type='range'
+                        data-testid='range'
                         step='500'
                         id='amount'
                         name='amount'

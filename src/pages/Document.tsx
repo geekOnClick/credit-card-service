@@ -1,6 +1,5 @@
 import { Header } from 'components/common/Header';
 import { Footer } from 'components/common/Footer';
-// import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Main } from 'components/common/Main';
 import { Button } from 'components/common/Button';
@@ -72,8 +71,7 @@ const Document = () => {
                 );
                 localStorage.setItem('applicationIdStageDone', 'true');
             })
-            .catch((err) => {
-                console.log(err);
+            .catch(() => {
                 dispatch(changeLoading(false));
                 dispatch(changeError(true));
             });

@@ -139,9 +139,6 @@
 .tooltip {
     position: relative;
     display: inline-block;
-
-    /*border-bottom: 1px dotted #ccc;
-    color: #006080; */
 }
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -155,13 +152,6 @@
     letter-spacing: 0.02em;
     color: #ffffff;
     padding: 8px 30px 8px 7px;
-    // text-align: center;
-    // padding: 5px;
-    // border-radius: 6px;
-    // z-index: 1;
-    // opacity: 0;
-    // transition: opacity 0.3s;
-    // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -170,19 +160,7 @@
 .tooltip-bottom {
     top: 80px;
     left: -10px;
-    // margin-left: -60px;
 }
-
-// .tooltip-bottom::after {
-//     content: '';
-//     position: absolute;
-//     bottom: 100%;
-//     left: 50%;
-//     margin-left: -5px;
-//     border-width: 11px;
-//     border-style: solid;
-//     border-color: transparent transparent #55555530 transparent;
-// }
 
 //Tabs
 .about-info_spacing {
@@ -525,13 +503,11 @@ details[open] summary:after {
     border-radius: 50px;
 }
 .step-separator {
-    // border: 0px solid rgba(128, 128, 128, 0.2);
     background-color: rgba(128, 128, 128, 0.2);
     transform: rotate(179.82deg);
     height: 2px;
     flex-grow: 1;
     display: none;
-    // margin-right: 36px;
 }
 .step__description {
     margin-top: 20px;
@@ -552,7 +528,6 @@ details[open] summary:after {
     margin: auto;
     padding: 32px;
     background-color: rgb(255, 255, 255);
-    /* display: flex; */
     justify-content: space-between;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 8%), 0px 2px 4px rgb(0 0 0 / 20%);
     border-radius: 28px;
@@ -633,8 +608,6 @@ details[open] summary:after {
     top: -13px;
     position: absolute;
     width: 30px;
-    // -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
-    // box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
 }
 
 .customize__range-quantity {
@@ -822,12 +795,6 @@ input::-moz-focus-outer {
     }
 }
 
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 920px) {
-}
-
 @media screen and (min-width: 1200px) {
     .customize__left-block {
         flex-basis: 55%;
@@ -839,12 +806,6 @@ input::-moz-focus-outer {
     .customize__border-dashed {
         border-right: 1px dashed rgba(128, 128, 128, 0.4);
     }
-}
-
-@media screen and (min-width: 1300px) {
-}
-
-@media only screen and (min-width: 1300px) and (max-width: 1399px) {
 }
 
 // .form
@@ -1039,20 +1000,17 @@ select {
 
 @media screen and (min-width: 620px) {
     .giftbox__items {
-        // max-width: 300px;
         gap: 40px;
     }
 }
 
 @media screen and (min-width: 768px) {
     .giftbox__items {
-        // justify-content: space-around;
         gap: 40px;
     }
 }
 @media screen and (min-width: 1300px) {
     .giftbox__items {
-        // min-width: 1340px;
         gap: 40px;
         justify-content: space-between;
     }
@@ -1085,8 +1043,7 @@ select {
 }
 //
 // Tablet
-// @media screen and (min-width: 768px) {
-// }
+
 // Tablet-Small Laptop
 @media screen and (min-width: 920px) {
     .cardAds__wrapper {

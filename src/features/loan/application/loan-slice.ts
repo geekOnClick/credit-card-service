@@ -1,17 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { IOffer } from 'types/loan';
 
+export interface ILoanSlice {
+    stages: {
+        stage: number;
+        range: number;
+        offers: IOffer[];
+        offer_id: null;
+    };
+    loading: boolean;
+    error: boolean;
+}
+const initialState: ILoanSlice = {
+    stages: {
+        stage: 1,
+        range: 15000,
+        offers: [],
+        offer_id: null,
+    },
+    loading: false,
+    error: false,
+};
 const loanSlice = createSlice({
     name: '@@loan',
-    initialState: {
-        stages: {
-            stage: 1,
-            range: 15000,
-            offers: [],
-            offer_id: null,
-        },
-        loading: false,
-        error: false,
-    },
+    initialState: initialState,
     reducers: {
         changeLoanData: (state, action) => {
             switch (action.payload.stage) {

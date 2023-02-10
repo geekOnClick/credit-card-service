@@ -33,7 +33,6 @@ const App = () => {
     const isEditingApplication = /^http:\/\/localhost:3000\/loan\/[\s\S]*$/.test(location.href);
 
     const clearAllData = () => {
-        console.log('CLEAR ALL');
         localStorage.removeItem('applicationIdStageDone');
         localStorage.removeItem('stage');
         localStorage.removeItem('applicationIdStage');
@@ -53,16 +52,13 @@ const App = () => {
             await axios
                 .get(api.GET_CURRENT_APPLICATION(id))
                 .then(({ data }) => {
-                    console.log(data);
-
                     if (stage === 3) {
                         if (!data.credit) return navigate('/*');
                     } else if (stage === 4) {
                         if (data.status !== 'DOCUMENT_CREATED') return navigate('/*');
+                    } else if (stage === 5) {
+                        if (!data.sesCode) return navigate('/*');
                     }
-                    // else if (stage === 5) {
-                    //     if (data.status !== 'DOCUMENT_CREATED') return navigate('/*');
-                    // }
                 })
                 .catch(() => {
                     clearAllData();
@@ -79,7 +75,7 @@ const App = () => {
         }
     };
     return (
-        <div className='wrapper h-100'>
+        <div className='wrapper h-100' data-testid='wrapper'>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='loan'>
@@ -99,4 +95,4 @@ const App = () => {
     );
 };
 
-export default App;
+export { App };

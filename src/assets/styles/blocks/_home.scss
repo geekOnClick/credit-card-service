@@ -2,7 +2,6 @@
     margin-top: 35px;
 }
 .cards-design div:first-child {
-    // max-width: 610px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,7 +20,6 @@
     margin-top: 22px;
 }
 .cards-design__promo-cards {
-    // width: 518px;
     max-width: 464px;
     height: 315px;
     margin-top: 35px;
@@ -31,12 +29,8 @@
     width: 228px;
 }
 
-// .features_spacing {
-//     margin-top: 40px;
-// }
 .features__img {
     background: url('../../img/features-sm.svg');
-    // width: 508.12px;
     height: 414.71px;
 }
 .features__textblock {
@@ -81,7 +75,6 @@
 }
 
 .exchange {
-    // height: 366px;
     background: linear-gradient(358.2deg, rgba(178, 178, 178, 0.8) 8.06%, rgba(178, 178, 178, 0) 67.93%), rgba(244, 244, 244, 0.9);
     mix-blend-mode: normal;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(187, 187, 187, 0.2);
@@ -199,10 +192,6 @@
 }
 .news-slider {
     max-width: 1300px;
-
-    // width: 100%;
-    /* margin: auto;
-    padding: 15px; */
     text-align: center;
     position: relative;
 }
@@ -363,7 +352,6 @@
     font-size: 16px;
 }
 .subscribe__text {
-    // font-weight: 700;
     margin-top: 14px;
     font-size: 25px;
     line-height: 147.4%;
@@ -375,7 +363,6 @@
     font-weight: 700;
 }
 .subscribe-form {
-    // width: 525px;
     height: 90px;
     padding: 0 32px 0 32px;
     background: #ffffff;
@@ -390,6 +377,13 @@
     padding-left: 43px;
 }
 .subscribe-form__email {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 147.4%;
+    letter-spacing: 0.02em;
+    color: #9092b0;
     border: 0;
 }
 .subscribe-form__email-wrapper::before {
@@ -398,15 +392,7 @@
     left: 0px;
     top: -5px;
 }
-input[placeholder] {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 147.4%;
-    letter-spacing: 0.02em;
-    color: #9092b0;
-}
+
 .subscribe-form__btn {
     width: 161.48px;
     height: 44.92px;
@@ -427,10 +413,6 @@ input[placeholder] {
     top: -3px;
 }
 
-//
-//
-//
-//
 // Tablet
 @media screen and (min-width: 768px) {
     .cards-design__promo-text {
