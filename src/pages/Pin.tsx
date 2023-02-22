@@ -52,6 +52,8 @@ const Pin = () => {
             await axios
                 .get(api.GET_CURRENT_APPLICATION(id))
                 .then(({ data: { sesCode } }) => {
+                    // adding console.log to be able to see sesCode
+                    console.log('sesCode:', sesCode);
                     dispatch(changeLoading(false));
                     dispatch(changeSesCode(sesCode));
                 })
@@ -100,8 +102,7 @@ const Pin = () => {
                         );
                         localStorage.setItem('applicationIdStageDone', 'true');
                     })
-                    .catch((err) => {
-                        console.log(err);
+                    .catch(() => {
                         dispatch(changeLoading(false));
                         dispatch(changeError(true));
                     });
@@ -254,25 +255,3 @@ const Pin = () => {
 };
 
 export { Pin };
-
-{
-    /* <div className='confirm'>
-    <div className='confirm__content container'>
-        <h1 className='confirm__title'>Please enter confirmation code</h1>
-        <div className='confirm__code-items'>
-            <div className='confirm__code-item'>
-                <input className='confirm__code-circle' />
-            </div>
-            <div className='confirm__code-item'>
-                <input className='confirm__code-circle' />
-            </div>
-            <div className='confirm__code-item'>
-                <input className='confirm__code-circle' />
-            </div>
-            <div className='confirm__code-item'>
-                <input className='confirm__code-circle' />
-            </div>
-        </div>
-    </div>
-</div>; */
-}

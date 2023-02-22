@@ -79,7 +79,7 @@ export const useValidate = () => {
     const validateIssueBranch = (value: string) => {
         if (!value) {
             return 'Required Field';
-        } else if (!/^\d{3}-\d{3}$/.test(value)) {
+        } else if (!/^\d{6}$/.test(value)) {
             return 'The series must be 6 digits';
         } else if (value.length < 6) {
             return 'The series must be 6 digits';

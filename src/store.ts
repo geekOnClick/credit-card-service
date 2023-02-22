@@ -6,28 +6,32 @@ import { exchangeReducer } from 'features/home/exchange/exchange-slice';
 import { newsReducer } from 'features/home/news/news-slice';
 import { loanReducer } from 'features/loan/application/loan-slice';
 import { applicationIdReducer } from 'features/loan/applicationId/applicationId-slice';
-// import * as conf from 'config'
+import { IRootState } from 'types/store';
+import type { PreloadedState } from '@reduxjs/toolkit';
 
-export const store = configureStore({
-    reducer: {
-        exchange: exchangeReducer,
-        news: newsReducer,
-        loan: loanReducer,
-        applicationId: applicationIdReducer,
-    },
-    devTools: true,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            thunk: {
-                extraArgument: {
-                    client: axios,
-                    api,
+export const createStore = (preloadedState?: PreloadedState<IRootState>) =>
+    configureStore({
+        preloadedState: preloadedState,
+        reducer: {
+            exchange: exchangeReducer,
+            news: newsReducer,
+            loan: loanReducer,
+            applicationId: applicationIdReducer,
+        },
+        devTools: true,
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({
+                thunk: {
+                    extraArgument: {
+                        client: axios,
+                        api,
+                    },
                 },
-            },
-            serializableCheck: false,
-        }),
-});
-
+                serializableCheck: false,
+            }),
+    });
+export const store = createStore();
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch: () => AppDispatch = useDispatch;
+export type AppStore = typeof store;

@@ -21,19 +21,9 @@ export const useSubscribe = (
                 setSubscribed(true);
                 localStorage.setItem('subscribed', `true`);
             })
-            .catch((err) => {
-                console.log(err);
+            .catch(() => {
                 setError(true);
             });
-
-        // if (data.request.status < 400) {
-        //     setSubscribed(true);
-        //     localStorage.setItem('subscribed', `true`);
-        // } else {
-        //     console.log('2');
-
-        //     setError(true);
-        // }
     };
 
     useEffect(() => {

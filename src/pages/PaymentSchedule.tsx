@@ -79,7 +79,8 @@ const PaymentSchedule = () => {
                 });
         }
         if (applicationId && scheduleDataStore.length === 0) getSheduleData(applicationId);
-    }, [dispatch, scheduleDataStore.length, applicationId, navigate]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // callback on click accept button
     const acceptShedule = async (e: Event) => {
@@ -100,8 +101,7 @@ const PaymentSchedule = () => {
                     );
                     localStorage.setItem('applicationIdStageDone', 'true');
                 })
-                .catch((err) => {
-                    console.log(err);
+                .catch(() => {
                     dispatch(changeLoading(false));
                     dispatch(changeError(true));
                 });

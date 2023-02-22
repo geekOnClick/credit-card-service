@@ -14,7 +14,10 @@ const NewsSlider = () => {
         <>
             {error && <h4 className='list-error'>{error}</h4>}
             {!error && (
-                <div className={`news-slider news-slider_spacing ${status === 'loading' ? 'news-slider-loading' : ''}`}>
+                <div
+                    data-testid='news-slider'
+                    className={`news-slider news-slider_spacing ${status === 'loading' ? 'news-slider-loading' : ''}`}
+                >
                     <div ref={scroller} className={`scroller ${status === 'loading' ? 'scroller-loading' : ''}`}>
                         <div className='news-items-block'>
                             {error && <h4 className='list-error'>Can&apos;t get news list</h4>}

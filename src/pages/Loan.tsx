@@ -6,7 +6,7 @@ import { Tabs } from 'components/loan-components/Tabs';
 import { Wizard } from 'components/loan-components/Wizard';
 const Loan = () => {
     return (
-        <div className='wrapper h-100'>
+        <div data-testid='loan' className='wrapper h-100'>
             <Header />
             <Main>
                 <CardAds />

@@ -19,12 +19,9 @@ export const loadCourses = createAsyncThunk<
         try {
             const data = await Promise.all(
                 pairs.map(async (pair: IPair) => {
-                    const { data } = await client.get(
-                        api.ACTUAL_COURSES(pair),
-                        {
-                            headers: ACTUAL_COURSES_HEADERS,
-                        }
-                    );
+                    const { data } = await client.get(api.ACTUAL_COURSES(pair), {
+                        headers: ACTUAL_COURSES_HEADERS,
+                    });
                     const updatedPair = JSON.parse(JSON.stringify(pair));
                     updatedPair.course = data.toFixed(2);
                     return updatedPair;
@@ -33,8 +30,6 @@ export const loadCourses = createAsyncThunk<
 
             return data;
         } catch (error) {
-            console.log('err', error);
-
             if (error instanceof Error) return rejectWithValue(error.message);
             return rejectWithValue('Unknown error');
         }
@@ -52,7 +47,7 @@ export const loadCourses = createAsyncThunk<
     }
 );
 
-interface IExchangeSlice {
+export interface IExchangeSlice {
     status: Status;
     error: string | null;
     pairs: IPair[];
