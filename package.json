@@ -58,5 +58,6 @@
         "jest-mock-axios": "^4.7.0-beta4",
         "sass": "^1.57.1"
     },
-    "proxy": "http://localhost:8080/"
+    "proxy": "http://localhost:8080/",
+    "homepage": "https://geekonclick.github.io/credit-card-service/build"
 }
